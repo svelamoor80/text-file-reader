@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -21,35 +21,86 @@
 .App-intro {
   font-size: large;
 }
+#fileElem {
+  margin-top: 50px;
+}
 .split {
   height: 100%;
- width:100%;
+  width:100%;
   position: fixed;
   z-index: 1;
   top: 0;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: auto;
-  /* padding-top: 20px; */
+  padding-top: 20px;
 }
 
-.left {
+/* .left {  
+  /* padding-top:200px; */
+  /* left: 0;
+  width: 30%;
+  border-right:1px solid black; 
+} */
+
+.left {  
+  /* padding-top:200px; */
   left: 0;
   width: 30%;
-  border-right:1px solid black;
+  /* border-right:1px solid black; */
+  float: left;
+  padding-right: 2%;
 }
 
 .right {
+  /* padding-top:200px; */
+  list-style: none;
   right: 0;
   width: 70%;
+  /* height: 90%; */
+  /* background-color: beige; */
 }
 
+/* .top {
+  height:90%;
+  
+}
+.bottom {
+  height: 10%;
+} */
 .centered {
   position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  height: 100%
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* text-align: center; */
 }
+#page-numbers {
+  list-style: none;
+  display: flex;
+}
+
+#page-numbers > div > li {
+  border: 1px solid gray;
+  margin-right: 0.3em;
+  color: blue;
+  user-select: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 0px;
+}
+
+#page-numbers > li.active {
+  background-color: gray;
+}
+
+.wellSpacing {
+  margin:10px auto;
+}
+
+.buttonSpacing {
+  margin:10px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
